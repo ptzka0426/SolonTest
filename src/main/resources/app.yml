@@ -1,0 +1,33 @@
+server.port: 8080
+
+solon.app:
+  name: 'demo-app'
+  group: 'demo'
+
+# 配置数据源
+test.db1:
+  schema: rock
+  jdbcUrl: jdbc:mysql://47.242.95.94:3306/rock?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  username: rock
+  password: iJ6ErpsKZ57m6WMM
+
+#默认
+mybatis.db1:
+  typeAliases:    #支持包名 或 类名 //支持 ** 和 *
+    - "com.example.demo.dso.model"
+  #        - "demo4031.*.AppxModel"
+  mappers:        #支持包名 或 类名 或 xml（.xml结尾）//支持 ** 和 *
+    - "com.example.demo.dso.mapper"
+  #        - "classpath:demo4031/dso/mapper/*.xml"
+  configuration:
+    cacheEnabled: false
+    mapperVerifyEnabled: false
+    mapUnderscoreToCamelCase: true
+    logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  globalConfig:
+    banner: false
+    metaObjectHandler: "com.example.demo.dso.MetaObjectHandlerImpl"
+    dbConfig:
+      logicDeleteField: "deleted"
+      logicDeleteValue: "2"
