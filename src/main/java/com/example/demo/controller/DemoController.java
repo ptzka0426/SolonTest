@@ -14,6 +14,6 @@ public class DemoController {
     @Mapping("/hello")
     public String hello(@Param(defaultValue = "world") Integer userName) throws Exception {
         return String.format("Hello %s!", appService.getApp(userName).getUsername());
-
     }
+
 }
