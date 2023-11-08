@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import cn.hutool.core.net.NetUtil;
 import com.example.demo.dso.service.userService;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.annotation.Inject;
@@ -18,6 +19,7 @@ public class DemoController {
 
     @Mapping("/hello1")
     public String hello1(@Param(defaultValue = "world") Integer userName) throws Exception {
+        System.out.println("ping:" + NetUtil.ping("47.242.95.94"));
         return String.format("Hello %s!", "测试成功！");
     }
 
