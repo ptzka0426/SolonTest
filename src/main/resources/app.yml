@@ -11,6 +11,7 @@ test.db1:
   driverClassName: com.mysql.cj.jdbc.Driver
   username: rock
   password: iJ6ErpsKZ57m6WMM
+  maxLifetime: 1000000
 
 #默认
 mybatis.db1:
