@@ -12,7 +12,11 @@ test.db1:
   username: rock
   password: iJ6ErpsKZ57m6WMM
   maxLifetime: 1000000
-
+  # 连接池的配置信息
+  # 初始化大小，最小，最大
+  initialSize: 5
+  minIdle: 5
+  maxActive: 20
 #默认
 mybatis.db1:
   typeAliases:    #支持包名 或 类名 //支持 ** 和 *
