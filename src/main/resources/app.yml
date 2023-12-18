@@ -7,7 +7,7 @@ solon.app:
 # 配置数据源
 test.db1:
   schema: rock
-  jdbcUrl: jdbc:mysql://47.242.95.94:3306/rock?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true
+  jdbcUrl: jdbc:mysql://47.242.95.94:3306/rock?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true&enabledTLSProtocols=TLSv1.2
   driverClassName: com.mysql.cj.jdbc.Driver
   username: rock
   password: iJ6ErpsKZ57m6WMM
